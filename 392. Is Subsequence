@@ -1,0 +1,39 @@
+code in java
+****************
+
+class Solution {
+    public boolean isSubsequence(String s, String t) {
+        if(s.length() == 0){
+            return true;
+        }
+
+        String sub="";
+        int index=0;
+
+        for(int i=0;i<t.length();i++){
+            if(s.charAt(index) == t.charAt(i)){
+                char c=t.charAt(i);
+                sub+=c;
+                index++;
+            }
+            if(sub.equals(s)){
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+-----------------------************************8-------------------*************************************---------------------------*****************************
+code in javascript
+******************
+var isSubsequence = function(s, t) {
+    let ch=0;
+
+    for(let i=0;i<t.length;i++){
+        if(t[i] === s[ch]){
+            ch++;
+        }
+    }
+    return (ch===s.length);
+};
