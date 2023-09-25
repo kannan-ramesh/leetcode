@@ -1,0 +1,33 @@
+public class FindDifference {
+
+	public static void main(String[] args) {
+//		Example 1:
+//
+//			Input: s = "abcd", t = "abcde"
+//			Output: "e"
+//			Explanation: 'e' is the letter that was added.
+		
+		String s="abcd";
+		String t="abcde";
+		
+		System.out.println(findtheDifference(s,t));
+		
+		
+
+	}
+
+	private static char findtheDifference(String s, String t) {
+		int num=0;
+		
+		for(int ch:t.toCharArray()) {
+			num+=ch;
+		}
+		for(int ch:s.toCharArray()) {
+			num-=ch;
+			
+		}
+		return (char)num;
+		
+	}
+
+}
